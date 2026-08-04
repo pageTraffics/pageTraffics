@@ -1,0 +1,25 @@
+# Node & Dependencies
+node_modules/
+frontend/node_modules/
+.npm
+*.log
+
+# Build Outputs
+dist/
+frontend/dist/
+build/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+frontend/.env
+frontend/.env.local
+
+# IDE & System Files
+.DS_Store
+.vscode/
+.idea/
+
+# Firebase
+.firebase/

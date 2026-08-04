@@ -1,0 +1,149 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Unified Light Theme Brand Colors (Matching Home Page) */
+  --color-primary-orange: #FF6900;
+  --color-primary-blue: #193CB8;
+  --color-brand-gradient: linear-gradient(135deg, #FF6900 0%, #193CB8 100%);
+  --color-brand-text-gradient: linear-gradient(90deg, #193CB8 0%, #FF6900 100%);
+
+  /* Light Theme Page & Card Backgrounds */
+  --bg-page-light: #f8fafc;
+  --bg-page-gradient: radial-gradient(circle at 10% 20%, rgba(25, 60, 184, 0.04) 0%, rgba(255, 105, 0, 0.04) 90%);
+  --bg-card-light: #ffffff;
+  --border-card-light: rgba(25, 60, 184, 0.12);
+
+  /* Light Theme Typography Colors */
+  --text-primary: #0f172a;
+  --text-heading: #193CB8;
+  --text-body: #475569;
+  --text-muted: #64748b;
+
+  /* Typography Scale */
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --size-hero: 3.2rem;
+  --size-h1: 2.5rem;
+  --size-h2: 2.0rem;
+  --size-h3: 1.25rem;
+  --size-body: 1.0rem;
+  --size-small: 0.875rem;
+
+  /* Components & Shadows */
+  --radius-card: 20px;
+  --radius-btn: 12px;
+  --shadow-card-light: 0 10px 30px rgba(25, 60, 184, 0.08);
+  --shadow-card-hover: 0 20px 40px rgba(25, 60, 184, 0.15);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background: var(--bg-page-light);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Global Light Theme Utility Classes */
+.page-container {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-page-gradient);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 2rem 1rem;
+  }
+}
+
+.text-gradient-brand {
+  background: var(--color-brand-text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.badge-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 50px;
+  background: rgba(255, 105, 0, 0.08);
+  border: 1px solid rgba(255, 105, 0, 0.25);
+  color: #FF6900;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.light-card {
+  background: var(--bg-card-light);
+  border: 1px solid var(--border-card-light);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card-light);
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.light-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.btn-primary-brand {
+  padding: 14px 28px;
+  background: #FF6900;
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-btn);
+  font-size: 1.0rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 10px 25px -5px rgba(255, 105, 0, 0.35);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary-brand:hover {
+  background: #e05d00;
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px -5px rgba(255, 105, 0, 0.45);
+}
+
+.btn-secondary-white {
+  padding: 14px 28px;
+  background: #ffffff;
+  color: #193CB8;
+  border: 1px solid rgba(25, 60, 184, 0.25);
+  border-radius: var(--radius-btn);
+  font-size: 1.0rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(25, 60, 184, 0.08);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-secondary-white:hover {
+  background: #f8fafc;
+  border-color: #193CB8;
+  transform: translateY(-2px);
+}
